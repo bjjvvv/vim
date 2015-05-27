@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/bjj/git/gitcafe-pages'
+let g:netrw_dirhist_2='/home/bjj/learnvim/code/substitution/refactor-project'
+let g:netrw_dirhist_3='/home/bjj/.vim/bundle/Vundle.vim'
