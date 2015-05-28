@@ -1,7 +1,17 @@
 filetype off " 暂时关闭
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+
+set rtp+=~/.vim/bundle/Vundle.vim/
+
+if has("win32")
+	let path='~/.vim/bundle'
+	call vundle#begin(path)
+else
+	call vundle#begin()
+endif
+
 Bundle "tomasr/molokai"
+
+
 call vundle#end()
+
 filetype plugin on
