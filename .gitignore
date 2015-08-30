@@ -1,2 +1,4 @@
 *.swf
 *~
+bundle/
+!bundle/Vundle.vim

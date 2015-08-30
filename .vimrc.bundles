@@ -9,9 +9,17 @@ else
 	call vundle#begin()
 endif
 
-Bundle "tomasr/molokai"
-
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'nvie/vim-flake8'
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
 
 filetype plugin on
+
+"-------------------------settings
+"vim-flake8
+"jedi-vim
+let g:jedi#force_py_version = 3

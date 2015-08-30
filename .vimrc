@@ -14,6 +14,9 @@ if has("multi_byte")
         source $VIMRUNTIME/delmenu.vim
         source $VIMRUNTIME/menu.vim
         language messages zh_CN.utf-8
+    else
+        "Ubuntu 14.04下GVIM的字体间距过宽
+        set guifont=Droid\ Sans\ Mono\ 11
     endif
 else
     echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
@@ -28,9 +31,12 @@ endif
 
 
 "----------------------------------------显示
-colorscheme molokai " 设置主题
+syntax enable
+set background=dark
+colorscheme solarized " 设置主题
 set ruler " 状态栏 
 set number " 行号
+syntax enable " 开启
 syntax on " 语法高亮
 set hls " 匹配高亮
 set showcmd " 显示当前输入命令
@@ -43,8 +49,9 @@ set ts=4 " tab为4个字符
 set et " tab替换为空格
 set smarttab " 删除tab的4个空格
 set nospell " 拼写检查
+set wrap
 set tw=78 " 设置光标超过78的时候折行
-set lbr " 不再单词中间折断
+set lbr " 不在单词中间折断
 set fo+=mB " 汉字断行处理
 set backspace=start,eol,indent" 删除行尾，回车，缩进
 set whichwrap=b,s,h,l,<,>,[,] " 支持左右跨行移动
