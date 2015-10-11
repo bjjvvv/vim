@@ -60,6 +60,10 @@ set whichwrap=b,s,h,l,<,>,[,] " 支持左右跨行移动
 set cin " 打开c/c++自动缩进
 " set ai " 自动缩进
 
+"---------------------------------map
+let mapleader = "["
+"---------------------------------
+
 
 " 来自 Vim 实用技巧
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%' " ex命令中%%转换为当前缓存文件目录路径
@@ -69,5 +73,5 @@ set hidden " 缓存切换位保存不提醒
 if has("autocmd")
     autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 endif
-nnoremap <silent> <C-l>  :<C-u>nohlsearch<Cr><C-l> " 清屏同时清除高亮
+nnoremap <silent> <C-l>  :<C-u>nohlsearch<Cr><C-l>h " 清屏同时清除高亮
 set incsearch " 增量搜索（实时匹配）
