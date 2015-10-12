@@ -1,4 +1,4 @@
-*.swf
+*.swp
 *~
 bundle/
 !bundle/Vundle.vim

@@ -25,7 +25,7 @@ filetype plugin on
 "-------------------------settings
 " vim-flake8
 " jedi-vim
-" let g:jedi#force_py_version = 3
+let g:jedi#force_py_version = 3
 
 " vim-indent_guides_guides
 let g:indent_guides_enable_on_vim_startup=1
@@ -34,11 +34,11 @@ let g:indent_guides_start_level=2
 " 色块宽度
 let g:indent_guides_guide_size=1
 " 快捷键 i 开/关缩进可视化
-:nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 
 " scrooloose/nerdtree
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
-nmap <Leader>fl :NERDTreeToggle<CR>
+nmap <silent> <Leader>fl :NERDTreeToggle<CR>
 " 设置NERDTree子窗口宽度
 let NERDTreeWinSize=32
 " 设置NERDTree子窗口位置
@@ -49,3 +49,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 let NERDTreeAutoDeleteBuffer=1
+
+" bling/vim-airline
+"let g:airline_theme="luna"
+let g:airline_powerline_fonts = 1

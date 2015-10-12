@@ -1,5 +1,7 @@
 set nocp " 非vi
 
+let mapleader = "["
+set t_Co=256
 
 "解决编码问题
 if has("multi_byte")
@@ -16,7 +18,7 @@ if has("multi_byte")
         language messages zh_CN.utf-8
     else
         "Ubuntu 14.04下GVIM的字体间距过宽
-        set guifont=Droid\ Sans\ Mono\ 11
+        set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 12
     endif
 else
     echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
@@ -64,14 +66,12 @@ set cin " 打开c/c++自动缩进
 " 基于缩进或语法进行代码折叠
 set foldmethod=indent
 "set foldmethod=syntax
-
 " 启动 vim 时关闭折叠代码
 set nofoldenable
 
 
-"---------------------------------map
-let mapleader = "["
-"---------------------------------
+"---------------------------------------map
+
 
 
 " 来自 Vim 实用技巧
