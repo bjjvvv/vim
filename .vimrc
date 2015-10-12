@@ -34,7 +34,8 @@ endif
 syntax enable
 set background=dark
 colorscheme solarized " 设置主题
-set ruler " 状态栏 
+set laststatus=2 " 状态栏
+set ruler " 标尺 
 set number " 行号
 syntax enable " 开启
 syntax on " 语法高亮
@@ -59,6 +60,14 @@ set whichwrap=b,s,h,l,<,>,[,] " 支持左右跨行移动
 " set sm " 括号配对
 set cin " 打开c/c++自动缩进
 " set ai " 自动缩进
+
+" 基于缩进或语法进行代码折叠
+set foldmethod=indent
+"set foldmethod=syntax
+
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+
 
 "---------------------------------map
 let mapleader = "["
