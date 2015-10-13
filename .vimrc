@@ -71,6 +71,8 @@ set nofoldenable
 
 
 "---------------------------------------map
+" quick switch background color between dark and light
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 
 
@@ -84,3 +86,15 @@ if has("autocmd")
 endif
 nnoremap <silent> <C-l>  :<C-u>nohlsearch<Cr><C-l>h " 清屏同时清除高亮
 set incsearch " 增量搜索（实时匹配）
+
+
+
+"-------------------autocmd
+" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
