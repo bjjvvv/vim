@@ -10,13 +10,13 @@ else
 endif
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tomasr/molokai'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'nvie/vim-flake8'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized' " 主题
+Plugin 'nvie/vim-flake8' " pep8检查
+Plugin 'davidhalter/jedi-vim' " python补全
+Plugin 'nathanaelkane/vim-indent-guides' " 缩进可视
+Plugin 'scrooloose/nerdtree' " 导航
+Plugin 'bling/vim-airline' " 状态栏
+Plugin 'tpope/vim-surround' " 处理周边
 
 call vundle#end()
 
