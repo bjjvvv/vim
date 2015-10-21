@@ -33,18 +33,26 @@ source ~/.vim/.vimrc.bundles
 endif
 "----------------------------------------Voudle
 
-
-"----------------------------------------显示
+"-------------------------------语法
 syntax enable
-colorscheme solarized " 设置主题
-set laststatus=2 " 状态栏
-set ruler " 标尺
-set number " 行号
 syntax enable " 开启
 syntax on " 语法高亮
+"---------------------------------------
+
+"----------------------------------------显示
+colorscheme solarized " 设置主题
+set background=dark
+set cursorcolumn
+set cursorline
 set hls " 匹配高亮
 set incsearch " 增量搜索（实时匹配）
+set laststatus=2 " 状态栏
+set number " 行号
+set number " 行号
+"set relativenumber
+set ruler " 标尺
 set showcmd " 显示当前输入命令
+" set scrolloff=8 " 屏幕上下保留
 " 清屏同时清除高亮
 nnoremap <silent> <C-l>  :<C-u>nohlsearch<Cr><C-l>
 "------------------------------------
@@ -57,9 +65,10 @@ set et " tab替换为空格
 set smarttab " 删除tab的4个空格
 set nospell " 拼写检查
 set wrap
-set tw=78 " 设置光标超过78的时候折行
-set lbr " 不在单词中间折断
-set fo+=mB " 汉字断行处理
+set nolbr
+" set tw=78 " 设置光标超过78的时候折行
+" set lbr " 不在单词中间折断
+" set fo+=mB " 汉字断行处理
 set backspace=start,eol,indent" 删除行尾，回车，缩进
 set whichwrap=b,s,h,l,<,>,[,] " 支持左右跨行移动
 " set sm " 括号配对
@@ -77,18 +86,23 @@ set nofoldenable
 " 用空格来当mapleader
 map <Space> <Leader>
 " quick switch background color between dark and light
-map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+map  <silent> <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 " 使 <C-p> <C-n> 支持历史过滤
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 " ex命令中%%转换为当前缓存文件目录路径
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+nnoremap  <leader>cn  :<C-u>cnext<Cr> " quicklist next
+nnoremap  <leader>cp  :<C-u>cprevious<Cr> " quicklist previous
 "---------------------------
 
 
 "-------------------------------实用
 set pastetoggle=<F5>
-set background=dark
+set ignorecase " 忽略忽略大小写
+set smartcase " 和 ignorecase 一起智能
+set history=200
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.py[oc]     " MacOSX/Linux
 "-------------------------------------
 
 "-------------------autocmd
